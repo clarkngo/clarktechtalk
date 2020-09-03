@@ -8,11 +8,9 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
+import { List, ListItem } from '@material-ui/core';
 
 const useStyles = makeStyles({
-  card: {
-    display: 'flex',
-  },
   cardDetails: {
     flex: 1,
   },
@@ -21,12 +19,18 @@ const useStyles = makeStyles({
   },
 });
 
+const _renderTodos = (arr) => {
+  return arr.map(el => {
+      return <ListItem>{el}</ListItem>
+  })
+}
+
 export default function FeaturedPost(props) {
   const classes = useStyles();
   const { post } = props;
 
   return (
-    <Grid item xs={12} md={6}>
+    <Grid item xs={12} md={12}>
       <CardActionArea component="a" href="#">
         <Card className={classes.card}>
           <div className={classes.cardDetails}>
@@ -40,9 +44,9 @@ export default function FeaturedPost(props) {
               <Typography variant="subtitle1" paragraph>
                 {post.description}
               </Typography>
-              <Typography variant="subtitle1" color="primary">
-                Continue reading...
-              </Typography>
+              <List>
+                {_renderTodos(post.list)}
+              </List>
             </CardContent>
           </div>
           <Hidden xsDown>

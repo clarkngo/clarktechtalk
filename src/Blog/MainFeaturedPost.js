@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
+import { List, ListItem } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -35,6 +36,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const _renderTodos = (arr) => {
+  return arr.map(el => {
+      return <ListItem>{el}</ListItem>
+  })
+}
+
 export default function MainFeaturedPost(props) {
   const classes = useStyles();
   const { post } = props;
@@ -56,6 +63,9 @@ export default function MainFeaturedPost(props) {
             <Link variant="subtitle1" href="#">
               {post.linkText}
             </Link>
+            <List>
+                {_renderTodos(post.list)}
+            </List>
           </div>
         </Grid>
       </Grid>
