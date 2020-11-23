@@ -193,9 +193,8 @@ const sidebar = {
   social: [
     { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/clarkngo' },
     { name: 'LinkedIn', icon: LinkedInIcon, url: 'https://www.linkedin.com/in/clarkngo/' },
-    { name: 'FreeCodeCamp News Author', icon: CreateIcon, url: 'https://www.freecodecamp.org/news/author/clarkngo' },
-    { name: 'YouTube Channel', icon: YouTubeIcon, url: 'https://www.youtube.com/channel/UCsgCdx9_lI7nwTS0pHCiCNw' },
-    { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/djjasonclark' },
+    { name: 'Blog', icon: CreateIcon, url: 'https://www.freecodecamp.org/news/author/clarkngo' },
+    { name: 'YouTube', icon: YouTubeIcon, url: 'https://www.youtube.com/channel/UCsgCdx9_lI7nwTS0pHCiCNw' },
   ],
 };
 
